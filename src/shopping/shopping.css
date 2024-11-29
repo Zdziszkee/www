@@ -1,0 +1,85 @@
+body {
+    font-family: "Parkinsans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #232136;
+    color: #c7c3da;
+}
+a {
+    background-color: #5bbfa1; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 5%;
+    text-decoration: none;
+}
+a:hover {
+    background-color: #71eac6;
+    cursor: pointer;
+}
+.shopping-button {
+    border-width: 5px;
+    border-color: #71eac6;
+    border-style: solid;
+}
+header {
+    display: flex;
+    place-content: center;
+    place-self: center;
+    place-self: center;
+    border: 1px #322f48 solid;
+    background-color: #38354e;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.recipies-button {
+    border-width: 5px;
+    border-color: #71eac6;
+    border-style: solid;
+}
+main {
+    place-self: center center;
+    background-color: #232136;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    grid-template-rows: repeat(3, 1fr); /* 3 equal-width columns */
+    width: 80%;
+    gap: 0; /* No gap between items */
+}
+
+.gallery-item {
+    place-content: center;
+    border-radius: 5%;
+    color: #9dced9;
+    margin: 5%;
+    border: 1px #322f48 solid;
+    background-color: #28253c;
+    text-align: center; /* Center text */
+}
+
+.gallery-item img {
+    width: 50%; /* Set the desired width */
+    height: 50%; /* Set the desired height */
+    object-fit: cover; /* Ensures the image fills the box without distortion */
+    border-radius: 5%; /* Optional: Make the image circular */
+    transition: all 1s ease;
+}
+
+img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    background-color: #38354e;
+}
