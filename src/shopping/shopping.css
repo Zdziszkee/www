@@ -41,11 +41,7 @@ header {
     width: 100%;
     z-index: 1000;
 }
-.recipies-button {
-    border-width: 5px;
-    border-color: #71eac6;
-    border-style: solid;
-}
+
 main {
     place-self: center center;
     background-color: #232136;
