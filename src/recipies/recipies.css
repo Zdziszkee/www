@@ -9,7 +9,22 @@ body {
     background-color: #232136;
     color: #c7c3da;
 }
+a {
+    background-color: #5bbfa1; /* Green */
+    border: none;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    font-size: 100%;
+    margin: 1%;
+    border-radius: 5%;
+    text-decoration: none;
+}
 
+a:hover {
+    background-color: #71eac6;
+    cursor: pointer;
+}
 header {
     display: flex;
     place-content: center;
@@ -22,27 +37,11 @@ header {
     width: 100%;
     z-index: 1000;
 }
-a {
-    background-color: #5bbfa1; /* Green */
-    border: none;
-    color: white;
-    padding: 1%;
-    text-align: center;
-    font-size: 100%;
-    margin: 1%;
-    border-radius: 5%;
-    text-decoration: none;
-}
-a:hover {
-    background-color: #71eac6;
-    cursor: pointer;
-}
 .recipies-button {
     border-width: 5px;
     border-color: #71eac6;
     border-style: solid;
 }
-
 main {
     place-self: center center;
     background-color: #232136;
@@ -70,8 +69,6 @@ main {
     border: 1px #322f48 solid;
     background-color: #28253c;
     text-align: center; /* Center text */
-    transition: transform 1s;
-    transform-style: preserve-3d;
 }
 
 .gallery-item img {
