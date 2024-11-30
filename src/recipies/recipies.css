@@ -9,6 +9,19 @@ body {
     background-color: #232136;
     color: #c7c3da;
 }
+
+header {
+    display: flex;
+    place-content: center;
+    place-self: center;
+    place-self: center;
+    border: 1px #322f48 solid;
+    background-color: #38354e;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 a {
     background-color: #5bbfa1; /* Green */
     border: none;
@@ -24,23 +37,12 @@ a:hover {
     background-color: #71eac6;
     cursor: pointer;
 }
-header {
-    display: flex;
-    place-content: center;
-    place-self: center;
-    place-self: center;
-    border: 1px #322f48 solid;
-    background-color: #38354e;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
 .recipies-button {
     border-width: 5px;
     border-color: #71eac6;
     border-style: solid;
 }
+
 main {
     place-self: center center;
     background-color: #232136;
@@ -50,7 +52,16 @@ main {
     width: 80%;
     gap: 0; /* No gap between items */
 }
-
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: repeat(
+            2,
+            1fr
+        ); /* 2 columns for smaller screens */
+        grid-template-rows: auto; /* Allow rows to auto-adjust height */
+    }
+}
 .gallery-item {
     place-content: center;
     border-radius: 5%;
@@ -59,8 +70,13 @@ main {
     border: 1px #322f48 solid;
     background-color: #28253c;
     text-align: center; /* Center text */
+    transition: transform 1s;
+    transform-style: preserve-3d;
 }
-
+.gallery-item:active {
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+}
 .gallery-item img {
     max-width: 70%; /* Prevents overflow beyond parent */
     height: auto;

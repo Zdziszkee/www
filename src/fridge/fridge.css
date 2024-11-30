@@ -51,7 +51,16 @@ main {
     width: 80%;
     gap: 0; /* No gap between items */
 }
-
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: repeat(
+            2,
+            1fr
+        ); /* 2 columns for smaller screens */
+        grid-template-rows: auto; /* Allow rows to auto-adjust height */
+    }
+}
 .gallery-item {
     place-content: center;
     border-radius: 5%;
@@ -60,11 +69,12 @@ main {
     border: 1px #322f48 solid;
     background-color: #28253c;
     text-align: center; /* Center text */
-    padding: 50px;
 }
 
 .gallery-item img {
-    max-width: 100%; /* Prevents overflow beyond parent */
+    margin: 5%;
+
+    max-width: 70%; /* Prevents overflow beyond parent */
     height: auto;
     object-fit: cover; /* Ensures the image fills the box without distortion */
     border-radius: 5%; /* Optional: Make the image circular */
