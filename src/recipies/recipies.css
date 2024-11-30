@@ -73,10 +73,7 @@ main {
     transition: transform 1s;
     transform-style: preserve-3d;
 }
-.gallery-item:active {
-    transform: rotateY(180deg);
-    transition: transform 0.5s;
-}
+
 .gallery-item img {
     max-width: 70%; /* Prevents overflow beyond parent */
     height: auto;
