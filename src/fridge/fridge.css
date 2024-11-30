@@ -18,10 +18,10 @@ a {
     background-color: #5bbfa1; /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 1%;
     text-align: center;
-    font-size: 16px;
-    margin: 10px;
+    font-size: 100%;
+    margin: 1%;
     border-radius: 5%;
     text-decoration: none;
 }
