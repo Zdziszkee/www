@@ -1,25 +1,141 @@
 <!doctype html>
-<html lang="en">
+<html>
     <head>
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=McLaren&family=Parkinsans:wght@300..800&display=swap");
-        </style>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Let him cook</title>
+        <title>Shopping List</title>
         <link rel="stylesheet" href="shopping.css" />
     </head>
     <body>
         <header>
-            <a class="recipies-button" href="../recipies/recipies.html"
-                >Recipies</a
-            >
-            <a class="fridge-button" href="../fridge/fridge.html">Fridge</a>
-            <a class="shopping-button" href="../shopping/shopping.html"
+            <a href="../recipies/recipies.html">Recipies</a>
+            <a href="../shopping/shopping.html" class="shopping-button"
                 >Shopping</a
             >
+            <a href="../fridge/fridge.html">Fridge</a>
         </header>
-        <main></main>
+        <div class="grid-container">
+            <!-- Example 1: Chicken Breast -->
+            <div class="flip-card">
+                <input type="checkbox" id="card1" />
+                <div class="flip-card-inner">
+                    <label for="card1" class="flip-card-front">
+                        <img
+                            src="../../images/shopping/chicken.jpg"
+                            alt="Chicken Breast"
+                        />
+                        <p>Chicken Breast</p>
+                        <div class="price">$5.99/lb</div>
+                    </label>
+                    <label for="card1" class="flip-card-back">
+                        <div class="nutrition-container">
+                            <h3>Nutrition Facts (per 100g)</h3>
+                            <div class="nutrition-row">
+                                <span>Calories:</span>
+                                <span>165 kcal</span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span>Protein:</span>
+                                <span>31g</span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span>Fat:</span>
+                                <span>3.6g</span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span>Carbs:</span>
+                                <span>0g</span>
+                            </div>
+                            <div class="additional-info">
+                                <p>Source: Local Farm</p>
+                                <p>Best before: 5 days</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Example 2: Salmon -->
+            <div class="flip-card">
+                <input type="checkbox" id="card2" />
+                <div class="flip-card-inner">
+                    <label for="card2" class="flip-card-front">
+                        <img
+                            src="../../images/shopping/losos.jpg"
+                            alt="Fresh Salmon"
+                        />
+                        <p>Fresh Salmon</p>
+                        <div class="price">$12.99/lb</div>
+                    </label>
+                    <label for="card2" class="flip-card-back">
+                        <div class="nutrition-container">
+                            <h3>Nutrition Facts (per 100g)</h3>
+                            <div class="nutrition-row">
+                                <span>Calories:</span>
+                                <span>208 kcal</span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span>Protein:</span>
+                                <span>22g</span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span>Fat:</span>
+                                <span>13g</span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span>Omega-3:</span>
+                                <span>2.3g</span>
+                            </div>
+                            <div class="additional-info">
+                                <p>Wild Caught</p>
+                                <p>Best before: 2 days</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Example 3: Avocado -->
+            <div class="flip-card">
+                <input type="checkbox" id="card3" />
+                <div class="flip-card-inner">
+                    <label for="card3" class="flip-card-front">
+                        <img
+                            src="../../images/shopping/awokado.jpg"
+                            alt="Avocado"
+                        />
+                        <p>Avocado</p>
+                        <div class="price">$1.99 each</div>
+                    </label>
+                    <label for="card3" class="flip-card-back">
+                        <div class="nutrition-container">
+                            <h3>Nutrition Facts (per 100g)</h3>
+                            <div class="nutrition-row">
+                                <span>Calories:</span>
+                                <span>160 kcal</span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span>Protein:</span>
+                                <span>2g</span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span>Fat:</span>
+                                <span>15g</span>
+                            </div>
+                            <div class="nutrition-row">
+                                <span>Fiber:</span>
+                                <span>7g</span>
+                            </div>
+                            <div class="additional-info">
+                                <p>Organic</p>
+                                <p>Ripe in: 2-3 days</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Add more items as needed -->
+        </div>
         <footer>
             <p>Copyright © 2024 Zdziszkee Inc. All rights reserved.</p>
         </footer>

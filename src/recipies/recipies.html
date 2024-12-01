@@ -1,61 +1,409 @@
 <!doctype html>
-<html lang="en">
+<html>
     <head>
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=McLaren&family=Parkinsans:wght@300..800&display=swap");
-        </style>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Let him cook</title>
+        <title>2x2 Flippable Grid with Images and Hover Effect</title>
         <link rel="stylesheet" href="recipies.css" />
     </head>
     <body>
         <header>
-            <a class="recipies-button" href="../recipies/recipies.html"
+            <a href="../recipies/recipies.html" class="recipies-button"
                 >Recipies</a
             >
-            <a class="fridge-button" href="../fridge/fridge.html">Fridge</a>
-            <a class="shopping-button" href="../shopping/shopping.html"
-                >Shopping</a
-            >
+            <a href="../shopping/shopping.html">Shopping</a>
+            <a href="../fridge/fridge.html">Fridge</a>
         </header>
-        <main>
-            <div class="gallery-item">
-                <img src="../../images/recipies/ciasto.jpg" alt="Image 1" />
-                <p>Ciasto</p>
+        <div class="grid-container">
+            <div class="flip-card">
+                <input type="checkbox" id="card1" />
+                <div class="flip-card-inner">
+                    <label for="card1" class="flip-card-front">
+                        <img
+                            src="../../images/recipies/ciasto.jpg"
+                            alt="Front 1"
+                        />
+                        <p>Ciasto</p>
+                    </label>
+                    <label for="card1" class="flip-card-back">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ingredient</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Flour</td>
+                                    <td>2 cups</td>
+                                </tr>
+                                <tr>
+                                    <td>Sugar</td>
+                                    <td>1.5 cups</td>
+                                </tr>
+                                <tr>
+                                    <td>Butter</td>
+                                    <td>1 cup</td>
+                                </tr>
+                                <tr>
+                                    <td>Eggs</td>
+                                    <td>3 large</td>
+                                </tr>
+                                <tr>
+                                    <td>Milk</td>
+                                    <td>1 cup</td>
+                                </tr>
+                                <tr>
+                                    <td>Baking Powder</td>
+                                    <td>2 tsp</td>
+                                </tr>
+                                <tr>
+                                    <td>Vanilla Extract</td>
+                                    <td>1 tsp</td>
+                                </tr>
+                                <tr>
+                                    <td>Salt</td>
+                                    <td>1/4 tsp</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </label>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="../../images/recipies/lasagne.webp" alt="Image 2" />
-                <p>Lasagne</p>
+
+            <div class="flip-card">
+                <input type="checkbox" id="card2" />
+                <div class="flip-card-inner">
+                    <label for="card2" class="flip-card-front">
+                        <img
+                            src="../../images/recipies/lasagne.webp"
+                            alt="Front 1"
+                        />
+                        <p>Lasagne</p>
+                    </label>
+                    <label for="card2" class="flip-card-back">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ingredient</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Flour</td>
+                                    <td>2 cups</td>
+                                </tr>
+                                <tr>
+                                    <td>Sugar</td>
+                                    <td>1.5 cups</td>
+                                </tr>
+                                <tr>
+                                    <td>Butter</td>
+                                    <td>1 cup</td>
+                                </tr>
+                                <tr>
+                                    <td>Eggs</td>
+                                    <td>3 large</td>
+                                </tr>
+                                <tr>
+                                    <td>Milk</td>
+                                    <td>1 cup</td>
+                                </tr>
+                                <tr>
+                                    <td>Baking Powder</td>
+                                    <td>2 tsp</td>
+                                </tr>
+                                <tr>
+                                    <td>Vanilla Extract</td>
+                                    <td>1 tsp</td>
+                                </tr>
+                                <tr>
+                                    <td>Salt</td>
+                                    <td>1/4 tsp</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </label>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="../../images/recipies/rosol.jpg" alt="Image 3" />
-                <p>Rosol</p>
+
+            <div class="flip-card">
+                <input type="checkbox" id="card3" />
+                <div class="flip-card-inner">
+                    <label for="card3" class="flip-card-front">
+                        <img
+                            src="../../images/recipies/rosol.jpg"
+                            alt="Front 1"
+                        />
+                        <p>Rosol</p>
+                    </label>
+                    <label for="card3" class="flip-card-back">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ingredient</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Flour</td>
+                                    <td>2 cups</td>
+                                </tr>
+                                <tr>
+                                    <td>Sugar</td>
+                                    <td>1.5 cups</td>
+                                </tr>
+                                <tr>
+                                    <td>Butter</td>
+                                    <td>1 cup</td>
+                                </tr>
+                                <tr>
+                                    <td>Eggs</td>
+                                    <td>3 large</td>
+                                </tr>
+                                <tr>
+                                    <td>Milk</td>
+                                    <td>1 cup</td>
+                                </tr>
+                                <tr>
+                                    <td>Baking Powder</td>
+                                    <td>2 tsp</td>
+                                </tr>
+                                <tr>
+                                    <td>Vanilla Extract</td>
+                                    <td>1 tsp</td>
+                                </tr>
+                                <tr>
+                                    <td>Salt</td>
+                                    <td>1/4 tsp</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </label>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="../../images/recipies/schabowy.webp" alt="Image 4" />
-                <p>schabowy</p>
+            <div class="flip-card">
+                <input type="checkbox" id="card4" />
+                <div class="flip-card-inner">
+                    <label for="card4" class="flip-card-front">
+                        <img
+                            src="../../images/recipies/schabowy.webp"
+                            alt="Front 1"
+                        />
+                        <p>Schabowy</p>
+                    </label>
+                    <label for="card4" class="flip-card-back">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ingredient</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pork Chops</td>
+                                    <td>4 pieces</td>
+                                </tr>
+                                <tr>
+                                    <td>Breadcrumbs</td>
+                                    <td>1 cup</td>
+                                </tr>
+                                <tr>
+                                    <td>Eggs</td>
+                                    <td>2 large</td>
+                                </tr>
+                                <tr>
+                                    <td>Flour</td>
+                                    <td>1/2 cup</td>
+                                </tr>
+                                <tr>
+                                    <td>Salt</td>
+                                    <td>to taste</td>
+                                </tr>
+                                <tr>
+                                    <td>Black Pepper</td>
+                                    <td>to taste</td>
+                                </tr>
+                                <tr>
+                                    <td>Vegetable Oil</td>
+                                    <td>for frying</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </label>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img
-                    src="../../images/recipies/Spaghetti_bolognese_4x3_V2_LOW_RES.webp"
-                    alt="Image 5"
-                />
-                <p>spagetti bolognese</p>
+
+            <div class="flip-card">
+                <input type="checkbox" id="card5" />
+                <div class="flip-card-inner">
+                    <label for="card5" class="flip-card-front">
+                        <img
+                            src="../../images/recipies/Spaghetti_bolognese_4x3_V2_LOW_RES.webp"
+                            alt="Front 1"
+                        />
+                        <p>Spaghetti Bolognese</p>
+                    </label>
+                    <label for="card5" class="flip-card-back">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ingredient</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ground Beef</td>
+                                    <td>1 lb</td>
+                                </tr>
+                                <tr>
+                                    <td>Spaghetti</td>
+                                    <td>1 package</td>
+                                </tr>
+                                <tr>
+                                    <td>Tomato Sauce</td>
+                                    <td>2 cups</td>
+                                </tr>
+                                <tr>
+                                    <td>Onion</td>
+                                    <td>1 medium</td>
+                                </tr>
+                                <tr>
+                                    <td>Garlic</td>
+                                    <td>3 cloves</td>
+                                </tr>
+                                <tr>
+                                    <td>Carrots</td>
+                                    <td>2 medium</td>
+                                </tr>
+                                <tr>
+                                    <td>Celery</td>
+                                    <td>2 stalks</td>
+                                </tr>
+                                <tr>
+                                    <td>Olive Oil</td>
+                                    <td>2 tbsp</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </label>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="../../images/recipies/tosty.webp" alt="Image 6" />
-                <p>tosty</p>
+
+            <div class="flip-card">
+                <input type="checkbox" id="card7" />
+                <div class="flip-card-inner">
+                    <label for="card7" class="flip-card-front">
+                        <img
+                            src="../../images/recipies/tosty.webp"
+                            alt="Front 1"
+                        />
+                        <p>Tosty</p>
+                    </label>
+                    <label for="card7" class="flip-card-back">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ingredient</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bread Slices</td>
+                                    <td>4 pieces</td>
+                                </tr>
+                                <tr>
+                                    <td>Ham</td>
+                                    <td>4 slices</td>
+                                </tr>
+                                <tr>
+                                    <td>Cheese</td>
+                                    <td>4 slices</td>
+                                </tr>
+                                <tr>
+                                    <td>Butter</td>
+                                    <td>2 tbsp</td>
+                                </tr>
+                                <tr>
+                                    <td>Tomato (optional)</td>
+                                    <td>4 slices</td>
+                                </tr>
+                                <tr>
+                                    <td>Salt</td>
+                                    <td>to taste</td>
+                                </tr>
+                                <tr>
+                                    <td>Pepper</td>
+                                    <td>to taste</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </label>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="../../images/recipies/wings.webp" alt="Image 7" />
-                <p>Wingsy</p>
+
+            <div class="flip-card">
+                <input type="checkbox" id="card8" />
+                <div class="flip-card-inner">
+                    <label for="card8" class="flip-card-front">
+                        <img
+                            src="../../images/recipies/wings.webp"
+                            alt="Front 1"
+                        />
+                        <p>Wingsy</p>
+                    </label>
+                    <label for="card8" class="flip-card-back">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Ingredient</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Chicken Wings</td>
+                                    <td>2 lbs</td>
+                                </tr>
+                                <tr>
+                                    <td>Hot Sauce</td>
+                                    <td>1 cup</td>
+                                </tr>
+                                <tr>
+                                    <td>Butter</td>
+                                    <td>1/2 cup</td>
+                                </tr>
+                                <tr>
+                                    <td>Garlic Powder</td>
+                                    <td>1 tsp</td>
+                                </tr>
+                                <tr>
+                                    <td>Paprika</td>
+                                    <td>1 tsp</td>
+                                </tr>
+                                <tr>
+                                    <td>Salt</td>
+                                    <td>to taste</td>
+                                </tr>
+                                <tr>
+                                    <td>Black Pepper</td>
+                                    <td>to taste</td>
+                                </tr>
+                                <tr>
+                                    <td>Vegetable Oil</td>
+                                    <td>for frying</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </label>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="../../images/recipies/zurek.jpg" alt="Image 8" />
-                <p>zurek</p>
-            </div>
-        </main>
+        </div>
         <footer>
             <p>Copyright © 2024 Zdziszkee Inc. All rights reserved.</p>
         </footer>

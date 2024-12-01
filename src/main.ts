@@ -1,1 +1,1 @@
-console.log("hejka!");
+console.log("siema!");

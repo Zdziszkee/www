@@ -1,21 +1,37 @@
 body {
     font-family: "Parkinsans", sans-serif;
-    display: flex;
-    flex-direction: column;
-    background-color: red;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: #232136;
     color: #c7c3da;
 }
-.fridge-button {
-    border-width: 5px;
-    border-color: #71eac6;
-    border-style: solid;
+
+header,
+footer {
+    background-color: #38354e;
+    color: #c7c3da;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1000;
+    border: 1px #322f48 solid;
 }
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    bottom: 0;
+}
+
+/* Navigation Links */
 a {
-    background-color: #5bbfa1; /* Green */
+    background-color: #5bbfa1;
     border: none;
     color: white;
     padding: 1%;
@@ -25,68 +41,160 @@ a {
     border-radius: 5%;
     text-decoration: none;
 }
+
 a:hover {
     background-color: #71eac6;
     cursor: pointer;
 }
-header {
-    display: flex;
-    place-content: center;
-    place-self: center;
-    place-self: center;
-    border: 1px #322f48 solid;
-    background-color: #38354e;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+
+.fridge-button {
+    border-width: 5px;
+    border-color: #71eac6;
+    border-style: solid;
 }
 
-main {
-    place-self: center center;
-    background-color: #232136;
+/* Grid Container */
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
-    grid-template-rows: repeat(3, 1fr); /* 3 equal-width columns */
-    width: 80%;
-    gap: 0; /* No gap between items */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin: 100px auto;
+    width: 80vw;
 }
-/* Responsive design for mobile devices */
+
 @media (max-width: 768px) {
-    main {
-        grid-template-columns: repeat(
-            2,
-            1fr
-        ); /* 2 columns for smaller screens */
-        grid-template-rows: auto; /* Allow rows to auto-adjust height */
+    .grid-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
 }
-.gallery-item {
-    place-content: center;
-    border-radius: 5%;
-    color: #9dced9;
-    margin: 5%;
-    border: 1px #322f48 solid;
-    background-color: #28253c;
-    text-align: center; /* Center text */
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    perspective: 1000px;
+    position: relative;
+    border: 2px solid #322f48;
+    border-radius: 10px;
 }
 
-.gallery-item img {
-    margin: 5%;
-
-    max-width: 70%; /* Prevents overflow beyond parent */
-    height: auto;
-    object-fit: cover; /* Ensures the image fills the box without distortion */
-    border-radius: 5%; /* Optional: Make the image circular */
-    transition: all 1s ease;
+.flip-card input[type="checkbox"] {
+    display: none;
 }
 
-img:hover {
+.flip-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card input[type="checkbox"]:checked ~ .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-inner label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    background-color: #28253c;
+    color: #c7c3da;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.flip-card-back {
+    background-color: #28253c;
+    color: #c7c3da;
+    transform: rotateY(180deg);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.flip-card-front img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.flip-card-front img:hover {
     transform: scale(1.1);
 }
 
-footer {
+.flip-card-front p {
+    margin-top: 10px;
     text-align: center;
-    background-color: #38354e;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Info Container Styles */
+.info-container {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #322f48;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #9dced9;
+}
+
+.info-value {
+    text-align: right;
+}
+
+.status-good {
+    background-color: rgba(91, 191, 161, 0.2);
+    border-radius: 5px;
+}
+
+.status-warning {
+    background-color: rgba(255, 165, 0, 0.2);
+    border-radius: 5px;
+}
+
+.status-expired {
+    background-color: rgba(255, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.flip-card:hover {
+    border-color: #5bbfa1;
+}
+
+.flip-card-inner label:hover {
+    color: #71eac6;
 }

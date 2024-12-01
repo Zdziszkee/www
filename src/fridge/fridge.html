@@ -1,40 +1,99 @@
 <!doctype html>
-<html lang="en">
+<html>
     <head>
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=McLaren&family=Parkinsans:wght@300..800&display=swap");
-        </style>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Let him cook</title>
+        <title>My Fridge</title>
         <link rel="stylesheet" href="fridge.css" />
     </head>
     <body>
         <header>
-            <a class="recipies-button" href="../recipies/recipies.html"
-                >Recipies</a
-            >
-            <a class="fridge-button" href="../fridge/fridge.html">Fridge</a>
-            <a class="shopping-button" href="../shopping/shopping.html"
-                >Shopping</a
-            >
+            <a href="../recipies/recipies.html">Recipies</a>
+            <a href="../shopping/shopping.html">Shopping</a>
+            <a href="../fridge/fridge.html" class="fridge-button">Fridge</a>
         </header>
-        <main>
-            <div class="gallery-item">
-                <img src="../../images/fridge/chleb.jpg" alt="Image 1" />
-                <p>Chleb</p>
+        <div class="grid-container">
+            <div class="flip-card">
+                <input type="checkbox" id="card1" />
+                <div class="flip-card-inner">
+                    <label for="card1" class="flip-card-front">
+                        <img src="../../images/fridge/mleko.jpg" alt="Milk" />
+                        <p>Milk</p>
+                    </label>
+                    <label for="card1" class="flip-card-back">
+                        <div class="info-container">
+                            <div class="info-row">
+                                <span class="info-label">Price:</span>
+                                <span class="info-value">$3.99</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Purchased:</span>
+                                <span class="info-value">2024-01-15 14:30</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Expires:</span>
+                                <span class="info-value">2024-01-22</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Quantity:</span>
+                                <span class="info-value">1L</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Storage:</span>
+                                <span class="info-value">Main Shelf</span>
+                            </div>
+                            <div class="info-row status-good">
+                                <span class="info-label">Status:</span>
+                                <span class="info-value">Fresh</span>
+                            </div>
+                        </div>
+                    </label>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="../../images/fridge/jajka.jpg" alt="Image 1" />
-                <p>Jajka</p>
+
+            <!-- Add more items following the same pattern -->
+            <!-- Example for eggs -->
+            <div class="flip-card">
+                <input type="checkbox" id="card2" />
+                <div class="flip-card-inner">
+                    <label for="card2" class="flip-card-front">
+                        <img src="../../images/fridge/jajka.jpg" alt="Eggs" />
+                        <p>Eggs</p>
+                    </label>
+                    <label for="card2" class="flip-card-back">
+                        <div class="info-container">
+                            <div class="info-row">
+                                <span class="info-label">Price:</span>
+                                <span class="info-value">$4.50</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Purchased:</span>
+                                <span class="info-value">2024-01-10 09:15</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Expires:</span>
+                                <span class="info-value">2024-01-24</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Quantity:</span>
+                                <span class="info-value">12 pcs</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Storage:</span>
+                                <span class="info-value">Door Shelf</span>
+                            </div>
+                            <div class="info-row status-warning">
+                                <span class="info-label">Status:</span>
+                                <span class="info-value">Use Soon</span>
+                            </div>
+                        </div>
+                    </label>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="../../images/fridge/mleko.jpg" alt="Image 1" />
-                <p>Mleko</p>
-            </div>
-        </main>
+
+            <!-- Add more items as needed -->
+        </div>
         <footer>
-            <p>Copyright © 2024 Zdziszkee Inc. All rights reserved.</p>
+            <p>My Fridge Contents</p>
         </footer>
     </body>
 </html>
